@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
+$bg-dark: #1a1a1a;
+$dark-card: #242424;
+$round: .25rem;
+$round-lg: .5rem;
+$round-xl: .1rem;
+
+:root {
+  --accent: #ff9142;
+  --accent-faded: #ff91429a;
+  --accent-suppl: #bd692e;
+  --bg: #{$bg-dark};
+  --card: #{$dark-card};
+}
+
+
+@font-face {
+    font-family: "Calibre";
+    src: url('assets/fonts/Calibre-Regular.woff2') format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Calibre";
+    src: url('assets/fonts/Calibre-Semibold.woff2') format("woff2");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: "Calibre";
+    src: url('assets/fonts/Calibre-Medium.woff2') format("woff2");
+    font-weight: bold;
+}
+
+/* Padding */
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: 4rem;
+}
+
+.p-16 {
+  padding: 8rem;
+}
+
+.tp-1 {
+    padding-top: 0.25rem;
+}
+
+.tp-4 {
+    padding-top: 1rem;
+}
+
+.bp-1 {
+    padding-top: 0.25rem;
+}
+
+.bp-4 {
+    padding-bottom: 1rem;
+}
+
+.lp-1 {
+    padding-left: 0.25rem;
+}
+
+.lp-4 {
+    padding-left: 1rem;
+}
+
+.lp-16 {
+    padding-left: 5rem;
+}
+/* Margins */
+.mr-8 {
+    margin-right: 5rem;
+}
+html,
+body {
+  background-color: var(--bg);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Text */
+
+.text {
+  font-family: Arial;
+  /* General */
+  &.large {
+    font-size: 32px;
+  }
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.slight-bold {
+    font-weight: 500;
+  }
+
+  &.light {
+    font-weight: lighter;
+  }
+
+  /* Fonts */
+
+  &.oswald {
+    font-family: "Oswald";
+  }
+
+  &.titl {
+    font-family: "Titillium Web";
+  }
+
+  &.calib {
+    font-family: "Calibre";
+  }
+ 
+  /* Colors */
+
+  &.white {
+    color: rgb(255 255 255);
+  }
+
+  &.gray {
+    color: rgb(156 163 175/0.9);
+  }
+  &.space-5 {
+    letter-spacing: .5px;
+  }
+  &.med {
+    font-size: 24px;
+  }
+}
+
+/* Flex */
+.flex {
+  display: flex;
+  &.row {
+    flex-direction: row;
+  }
+  &.col {
+    flex-direction: column;
+  }
+  &.js-space {
+    justify-content: space-between;
+  }
+  &.js-center {
+    justify-content: center;
+  }
+  &.ai-center {
+    align-items: center;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.gap-4 {
+    gap: .5rem;
+  }
+  &.gap-half {
+    gap: 45%;
+  }
+}
+
+/* Card */
+.card {
+  background-color: var(--card);
+}
+
+
+/* Links */ 
+.link {
+    cursor: pointer !important;
+    transition: all 150ms ease;
+    &:hover {
+        color: var(--accent-faded);
+    }
+    &.active-link {
+        color: rgb(71, 73, 77);
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+/* Misc */
+.unset {
+  all: unset;
+}
+
+.ns, .no-select {
+    user-select: none;
+}

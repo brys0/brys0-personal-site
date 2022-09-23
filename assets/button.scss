@@ -1,0 +1,64 @@
+@import "./main.scss";
+
+.btn {
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #00000057;
+  transition: all 150ms ease;
+  outline: transparent 4px solid;
+  cursor: pointer !important; 
+
+  &.text {
+    padding-bottom: 0.625rem;
+    padding-top: 0.625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+
+  &.rounded {
+    border-radius: $round;
+  }
+
+  &.rounded-lg {
+    border-radius: $round-lg;
+  }
+
+  &.primary {
+    background-color: var(--accent);
+    &.disabled {
+        background-color: var(--accent-suppl);
+    }
+    &.react {
+      --hover-outline: var(--accent-faded) 2px solid;
+      --hover-opacity: 0.9;
+      --focus-outline: var(--accent-faded) 4px solid;
+    }
+    &.react:hover {
+      outline: var(--accent-faded) 2px solid;
+    }
+    &.react:focus {
+      outline: var(--accent-faded) 4px solid;
+    }
+  }
+
+  &.react {
+    &:hover {
+      outline: var(--hover-outline);
+      opacity: var(--hover-opacity);
+    }
+    &:focus {
+      outline: var(--focus-outline);
+    }
+  }
+
+  &.icon-only {
+    padding: 0.2rem;
+    border-radius: $round-lg;
+    &.react:hover {
+      transform: scale(1.02);
+    }
+  }
+}
