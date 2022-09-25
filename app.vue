@@ -3,19 +3,23 @@
 
 <template>
   <div id="my-site-not-yours">
-    <NuxtPage style="height: 100%; overflow-y: auto;" />
+    <Header />
+    <Transition name="page">
+      <NuxtPage style="min-height: 100vh; overflow-y: auto;" />
+    </Transition>
     <Footer />
   </div>
- 
+
 </template>
 
 
 <style lang="scss" scoped>
 #__nuxt {
-  height: 100vh;
+  min-height: 100vh;
 }
+
 #my-site-not-yours {
-  height: 100vh;
-  
+  min-height: 100vh;
+
 }
 </style>

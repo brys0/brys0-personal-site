@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { PhInstagramLogo } from '@dnlsndr/vue-phosphor-icons';
-</script>
-
 <template>
     <footer class="flex row tp-4 bp-4 lp-4 wrap card js-space" id="footer">
         <div class="flex col">
@@ -12,14 +8,14 @@ import { PhInstagramLogo } from '@dnlsndr/vue-phosphor-icons';
         </div>
         <nav class="flex row mr-8 text small titl white card gap-half ns" id="footer-navigation">
             <div class="nav-bar flex col p-4 text gray titl links" id="navbar-1">
-                <a href="/" class="link unset active-link">Home</a>
-                <a href="/about" class="link unset">About</a>
-                <a href="/projects" class="link unset">Projects</a>
+                <NuxtLink to="/" class="link unset">Home</NuxtLink>
+                <NuxtLink to="/about" class="link unset">About</NuxtLink>
+                <NuxtLink to="/projects" class="link unset">Projects</NuxtLink>
             </div>
             <div class="nav-bar flex col p-4 text gray titl links" id="navbar-1">
-                <a href="/contact" class="link unset">Contact</a>
-                <a href="/about" class="link unset">Education</a>
-                <a href="/projects" class="link unset">Technologies</a>
+                <NuxtLink to="/contact" class="link unset">Contact</NuxtLink>
+                <NuxtLink to="/about" class="link unset">Education</NuxtLink>
+                <NuxtLink to="/projects" class="link unset">Technologies</NuxtLink>
             </div>
         </nav>
     </footer>

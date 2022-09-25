@@ -15,7 +15,6 @@
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     font-weight: bold;
-    font-size: 0.875rem;
   }
 
   &.rounded {
@@ -43,7 +42,14 @@
       outline: var(--accent-faded) 4px solid;
     }
   }
-
+  &.default {
+    --focus-color: var(--info);
+      &.react {
+        --hover-outline: var(--focus-color) 2px solid;
+        --hover-opacity: 0.9;
+        --focus-outline: var(--focus-color) 4px solid;
+      }
+  }
   &.react {
     &:hover {
       outline: var(--hover-outline);
@@ -55,8 +61,10 @@
   }
 
   &.icon-only {
-    padding: 0.2rem;
+    padding: 0.5rem;
     border-radius: $round-lg;
+    min-height: 32px;
+    min-width: 32px;
     &.react:hover {
       transform: scale(1.02);
     }

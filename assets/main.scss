@@ -11,6 +11,9 @@ $round-xl: .1rem;
   --accent-suppl: #bd692e;
   --bg: #{$bg-dark};
   --card: #{$dark-card};
+  --red: #f25757;
+  --spotify: #1DB954;
+  --info: #70C0E8;
 }
 
 
@@ -178,7 +181,7 @@ body {
     cursor: pointer !important;
     transition: all 150ms ease;
     &:hover {
-        color: var(--accent-faded);
+        color: var(--info);
     }
     &.active-link {
         color: rgb(71, 73, 77);
@@ -194,4 +197,12 @@ body {
 
 .ns, .no-select {
     user-select: none;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: all .2s
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  filter: blur(10px);
 }
