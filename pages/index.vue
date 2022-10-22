@@ -25,6 +25,24 @@ onMounted(() => {
         backgroundY.value = (window.scrollY / scrollMaxValue()) * 100;
     }
 })
+
+useHead({
+    title: 'Brys\' Site',
+    meta: [
+        {
+            name: 'description', 
+            content: 'Home page of my site'
+        },
+        {
+            content: 'Brys\' Personal Site',
+            property: 'og:title'
+        },
+        {
+            property: 'og:description',
+            content: 'Home page of this mid site'
+        },
+    ]
+})
 </script>
 
 <template>

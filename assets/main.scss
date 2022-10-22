@@ -199,10 +199,21 @@ body {
     user-select: none;
 }
 
+.rel, .relative {
+  position: relative;
+}
+.abs, .absolute {
+  position: absolute;
+}
 .page-enter-active, .page-leave-active {
   transition: all .2s
 }
 .page-enter, .page-leave-active {
   opacity: 0;
   filter: blur(10px);
+}
+
+.slide-fade-enter-from {
+  transform: translateY(-35px);
+  opacity: 0.4;
 }

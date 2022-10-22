@@ -9,6 +9,26 @@ import { PhGithubLogo, PhLink, PhDisc, PhChats, PhSpotifyLogo, PhConfetti } from
 const openPage = (page: string) => {
     window.open(page, '_blank');
 }
+useHead({
+    title: 'Brys\' Site -> Projects',
+    htmlAttrs: {
+        lang: 'en'
+    },
+    meta: [
+        {
+            name: 'description', 
+            content: 'Projects page'
+        },
+        {
+            content: 'Brys\' Personal Site > Projects',
+            property: 'og:title'
+        },
+        {
+            property: 'og:description',
+            content: 'Projects page.. lol'
+        },
+    ]
+})
 </script>
 
 <template>
@@ -31,17 +51,17 @@ const openPage = (page: string) => {
                     <h2 class="flex js-space">Lightable</h2>
                     <span class="text gray titl">Lightable is a cross-platform application to chat with your friends.<br>You can meet new people, or join a community of friends.<br>Everything is entirely open-source.<br />The sky is the limit, sign-up today!</span>
                     <div class="down flex row">
-                        <IconButton class="default" @click="openPage('https://github.com/Lightable/Lightable')">
+                        <IconButton class="default" @click="openPage('https://github.com/Lightable/Lightable')" aria-label="Github Page For Lightable" aria-describedby="Website Link">
                             <PhGithubLogo size="24" weight="duotone" />
                         </IconButton>
-                        <IconButton class="default" @click="openPage('https://lightable.app/?ref=personal-site')">
+                        <IconButton class="default" @click="openPage('https://lightable.app/?ref=personal-site')" aria-label="Lightable Website" aria-describedby="Website Link">
                             <PhLink size="24" weight="duotone" />
                         </IconButton>
                     </div>
 
                 </div>
             </div>
-            <div class="project-group flex row wrap" style="--i: 2">
+            <div class="project-group flex row wrap" style="--i: 1.5">
                 <div class="card-container">
                     <Card :image="MusicPlayer" :height="273" :width="426">
                         <template #header>
@@ -59,14 +79,14 @@ const openPage = (page: string) => {
                     <h2 class="flex js-space">Br4d's Music Player</h2>
                     <span class="text gray titl">A simple and basic music player app, built as a coding challenge</span>
                     <div class="down flex row">
-                        <IconButton class="default">
+                        <IconButton class="default" aria-label="Github Page For Br4d's Music Player" aria-describedby="Website Link">
                             <PhGithubLogo size="24" weight="duotone" @click="openPage('https://github.com/br4dw/music-player')" />
                         </IconButton>
                     </div>
 
                 </div>
             </div>
-            <div class="project-group flex row wrap" style="--i: 3">
+            <div class="project-group flex row wrap" style="--i: 2">
                 <div class="card-container">
                     <Card :image="SpotifyWebServer" :height="273" :width="426">
                         <template #header>
@@ -84,14 +104,14 @@ const openPage = (page: string) => {
                     <h2 class="flex js-space">Spotify Web</h2>
                     <span class="text gray titl">A proxy & caching layer for Spotify API requests.<br>With concise payloads and perdictable errors.</span>
                     <div class="down flex row">
-                        <IconButton class="default">
+                        <IconButton class="default" aria-label="Github page for Spotify Web" aria-describedby="Website Link">
                             <PhGithubLogo size="24" weight="duotone" @click="openPage('https://github.com/brys0/Spotify-Web')" />
                         </IconButton>
                     </div>
 
                 </div>
             </div>
-            <div class="project-group flex row wrap" style="--i: 3">
+            <div class="project-group flex row wrap" style="--i: 2.5">
                 <div class="card-container">
                     <Card :image="PersonalSite" :height="273" :width="426">
                         <template #header>
@@ -109,7 +129,7 @@ const openPage = (page: string) => {
                     <h2 class="flex js-space">This Site</h2>
                     <span class="text gray titl">Self explanatory</span>
                     <div class="down flex row">
-                        <IconButton class="default">
+                        <IconButton class="default" aria-label="Github Page For This Website" aria-describedby="Website Link" role="button">
                             <PhGithubLogo size="24" weight="duotone" @click="openPage('https://github.com/brys0/brys0-personal-site')" />
                         </IconButton>
                     </div>
